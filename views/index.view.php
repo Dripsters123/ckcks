@@ -1,8 +1,8 @@
+<?php require "components/head.php" ?>
+<?php require "components/navbar.php" ?>
+
 <ul>
-    <?php foreach ($pasakumi as $pasakumi) { ?>
-
-        <li> <?= $pasakumi["title"] ?> </li>
-    <?php } ?>
-
-
+    yes
 </ul>
+
+<?php require "components/footer.php" ?>

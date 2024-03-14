@@ -1,33 +1,29 @@
 <?php
-require "functions.php";
 require "Database.php";
 
 $config = require("config.php");
 
-$query = "SELECT * FROM pasakumi";
+$query = "SELECT * FROM kolektivi";
 $params = [];
 
 if (isset($_GET["id"]) && $_GET["id"] != "") {
-   
+
     $id = $_GET["id"];
     $query .= " WHERE id=:id";
     $params = [":id" => $id];
 }
+if (isset($_GET["category"]) && $_GET["category"] != "") {
 
-if (isset($_GET["kolektivi"]) && $_GET["kolektivi"] != "") {
-    
-    $category = trim($_GET["kolektivi"]);
-    $query .= " LEFT JOIN kolektivi ON pasakumi.kolektivi_id = kolektivi.id WHERE categories.name = :kolektivi";
-    $params = [":kolektivi" => $kolektivi];
+    $category = trim($_GET["category"]);
+    $query .= " LEFT JOIN categories ON kolektivi.category_id = categories.id WHERE categories.name = :category";
+    $params = [":category" => $category];
 }
 
-// Create a new Database object with the configuration
 $db = new Database($config);
 
-// Execute the query and fetch all the results
-$posts = $db
+$kolektivi = $db
     ->execute($query, $params)
     ->fetchAll();
-$title = "Posts";
+$title = "kolektivi";
 
 require "views/index.view.php";
