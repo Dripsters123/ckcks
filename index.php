@@ -6,7 +6,7 @@ $url = $url_array["path"];
 
 if ($url == "/kolektivi") {
     require "controllers/kolektivi.php";
-} else if ($url == "/index") {
+} else if ($url == "/") {
     require "controllers/index.php";
 } else {
     http_response_code(404);
