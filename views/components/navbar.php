@@ -1,6 +1,6 @@
  <header>
      <nav>
-         <a href="/"></a>
-         <a href="kolektivi">kolektivi</a>
+         <a href="/">Galvenā lapa</a>
+         <a href="kolektivi">Kolektivi</a>
      </nav>
  </header>

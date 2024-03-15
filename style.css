@@ -1,0 +1,45 @@
+body {
+  background-color: blanchedalmond;
+}
+nav {
+  overflow: hidden;
+  justify-content: space-between;
+  display: flex;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+a {
+  flex: 1;
+  display: block;
+  color: red;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 25px;
+  text-decoration: none;
+}
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+table {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+th {
+  font-size: 27px;
+}
+td {
+  font-size: 20px;
+}
+
+h1 {
+  text-align: center;
+}
