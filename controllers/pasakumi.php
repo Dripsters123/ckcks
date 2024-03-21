@@ -13,4 +13,4 @@ $posts = $db
     ->fetchAll();
 $title = " ";
 
-require "views/index.view.php";
+require "views/pasakumi.view.php";
