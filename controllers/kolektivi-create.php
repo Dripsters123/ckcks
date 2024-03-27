@@ -5,18 +5,18 @@ $config = require("config.php");
 $db = new Database($config);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $query = "INSERT INTO kolektivi (name,description)
-    VALUES (:name,:description);";
+    $query = "INSERT INTO kolektivi (NAME,DESCRIPTION)
+    VALUES (:NAME,:DESCRIPTION);";
 
     $params = [
-        ":name" => $_POST["description"],
-        ":description" => $_POST["description"]
+        ":NAME" => $_POST["NAME"],
+        ":DESCRIPTION" => $_POST["DESCRIPTION"]
     ];
     $db->execute($query, $params);
 
-    header("Location: /");
+    header("Location: /kolektivi");
     die();
 };
 
-$title = "Pievienot Pasakumus";
+$title = "Pievienot Kolektivi";
 require "views/kolektivi-create.view.php";

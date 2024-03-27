@@ -6,15 +6,20 @@
         <tr>
             <th>Kolektīvs</th>
             <th>Apraksts</th>
+            <th>Dzēst</th>
         </tr>
-        <ul>
-            <?php foreach ($posts as $post) { ?>
+        <?php foreach ($posts as $post) { ?>
             <tr>
                 <td><?= $post["NAME"] ?> </td>
-                <td><?= $post["DESCRIPTION"] ?> </td> 
-            <?php } ?>
-        </tr>
-        </ul>
+                <td><?= $post["DESCRIPTION"] ?> </td>
+                <td>
+                    <form method="POST" action="/delete-kolektivi">
+                        <input type="hidden" name="id" value="<?= $post['id'] ?>">
+                        <button>Dzēst</button>
+                    </form>
+                </td>
+            </tr>
+        <?php } ?>
     </table>
 </div>
 <?php require "components/footer.php" ?>

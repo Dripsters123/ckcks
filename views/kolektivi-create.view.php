@@ -5,12 +5,11 @@
 
 <form method="POST">
     <label>Nosaukums:
-        <input name="name" />
+        <input name="NAME" />
     </label>
     <label>Apraksts:
-        <input name="description" />
+        <input name="DESCRIPTION" />
     </label>
-
 
     <button>Pievienot</button>
 </form>

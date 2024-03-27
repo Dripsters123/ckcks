@@ -4,7 +4,7 @@
          <a href="kolektivi">Kolektivi</a>
          <a href="create">Pievienot pasākumus</a>
          <a href="delete">Dzēst pasākumus</a>
-         <a href="kolektivi-create">Pievienot kolektīvus</a>
-
+         <a href="create-kolektivi">Pievienot kolektīvus</a>
+         <a href="delete-kolektivi">Dzēst kolektīvus</a>
      </nav>
  </header>
