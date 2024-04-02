@@ -41,4 +41,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $title = "Pievienot Pasakumus";
-require "views/pasakumi-create.view.php";
+require "views/pasakumi/create.view.php";

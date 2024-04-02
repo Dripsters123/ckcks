@@ -1,5 +1,5 @@
-<?php require "components/head.php" ?>
-<?php require "components/navbar.php" ?>
+<?php require "views/components/head.php" ?>
+<?php require "views/components/navbar.php" ?>
 
 <h1>Pievieno jaunu Pasākumu</h1>
 
@@ -14,4 +14,4 @@
     <button>Pievienot</button>
 </form>
 
-<?php require "components/footer.php" ?>
+<?php require "views/components/footer.php" ?>

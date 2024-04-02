@@ -19,4 +19,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 };
 
 $title = "Pievienot Kolektivi";
-require "views/kolektivi-create.view.php";
+require "views/kolektivi/create.view.php";

@@ -4,16 +4,16 @@ $config = require("config.php");
 $db = new Database($config);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $query = "DELETE FROM kolektivi WHERE id = :id";
+    $query = "DELETE FROM pasakumi WHERE id = :id";
 
     $params = [
         ":id" => $_POST["id"]
     ];
     $db->execute($query, $params);
 
-    header("Location: /kolektivi");
+    header("Location: /");
     die();
 };
 
 $title = "Dzēst Pasākumus";
-require "views/kolektivi-delete.view.php";
+require "views/pasakumi/delete.view.php";

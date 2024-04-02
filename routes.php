@@ -1,9 +1,9 @@
 <?php
 return [
-    "/" => "controllers/pasakumi.php",
-    "/kolektivi" => "controllers/kolektivi.php",
-    "/create" => "controllers/pasakumi-create.php",
-    "/delete" => "controllers/delete-pasakumi.php",
-    "/create-kolektivi" => "controllers/kolektivi-create.php",
-    "/delete-kolektivi" => "controllers/kolektivi-delete.php"
+    "/" => "controllers/pasakumi/index.php",
+    "/kolektivi" => "controllers/kolektivi/index.php",
+    "/create" => "controllers/pasakumi/create.php",
+    "/delete" => "controllers/pasakumi/delete.php",
+    "/create-kolektivi" => "controllers/kolektivi/create.php",
+    "/delete-kolektivi" => "controllers/kolektivi/delete.php"
 ];

@@ -13,4 +13,4 @@ $posts = $db
     ->fetchAll();
 $title = " ";
 
-require "views/kolektivi.view.php";
+require "views/kolektivi/index.view.php";
