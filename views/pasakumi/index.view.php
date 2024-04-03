@@ -4,7 +4,7 @@
 <ul>
     <?php foreach ($posts as $post) { ?>
         <li>
-            <a href="/show?id=<?= $post['id'] ?>">
+            <a href="/show-pas?id=<?= $post['id'] ?>">
                 <?= htmlspecialchars($post["date_time"] . " /" . $post["nosaukums"] . " /" . $post["norises_vieta"]) ?>
             </a>
             <form method="POST" action="/delete">

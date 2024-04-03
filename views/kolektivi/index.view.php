@@ -10,7 +10,7 @@
         </tr>
         <?php foreach ($posts as $post) { ?>
             <tr>
-                <td><?= $post["NAME"] ?> </td>
+                <td><a href="/show-kol?id=<?= $post['id'] ?>"><?= $post["NAME"] ?></a></td>
                 <td><?= $post["DESCRIPTION"] ?> </td>
                 <td>
                     <form method="POST" action="/delete-kolektivi">
