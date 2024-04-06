@@ -3,9 +3,10 @@
 
 <h1>Kolektīvi</h1>
 
-<form action="/kolektivi/edit" method="POST">
-    <input type="text" name="title" ?>
-    <button name="id" value="<?= $post['id'] ?>">Edit</button>
-</form>
+<?= htmlspecialchars($post["NAME"]) . " | " . htmlspecialchars($post["DESCRIPTION"]) ?>
+
+
+
+<a href="/edit-kol?id=<?= $post["id"] ?>">Edit</a>
 
 <?php require "views/components/footer.php" ?>

@@ -4,10 +4,11 @@ $config = require("config.php");
 $db = new Database($config);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $query = "UPDATE posts SET name = :name,description = :description";
+    $query = "UPDATE kolektivi SET NAME = :NAME,DESCRIPTION = :DESCRIPTION  WHERE id = :id";
     $params = [
-        'name' => $_POST['name'],
-        'description' => $_POST['description']
+        ':NAME' => $_POST['NAME'],
+        ':DESCRIPTION' => $_POST['DESCRIPTION'],
+        ':id' => $_POST['id']
     ];
 
     $db->execute($query, $params);
@@ -15,7 +16,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: /kolektivi");
     die();
 };
+$query = "SELECT * FROM kolektivi WHERE id = :id";
+$params = [":id" => $_GET["id"]];
+
+$post = $db->execute($query, $params)->fetch();
+
 
 $title = "Mainīt kolektīvu";
 
-require "views/posts/edit.view.php";
+require "views/kolektivi/edit.view.php";

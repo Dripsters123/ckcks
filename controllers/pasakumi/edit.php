@@ -3,6 +3,7 @@ require "Database.php";
 $config = require("config.php");
 $db = new Database($config);
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $query = "UPDATE pasakumi SET date_time = :date_time, nosaukums = :nosaukums, norises_vieta = :norises_vieta WHERE id = :id";
 
@@ -18,6 +19,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: /");
     die();
 };
+
+$query = "SELECT * FROM pasakumi WHERE id = :id";
+$params = [":id" => $_GET["id"]];
+
+$post = $db->execute($query, $params)->fetch();
 
 $title = "Mainīt pasākumu";
 
