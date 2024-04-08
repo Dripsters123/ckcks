@@ -5,7 +5,7 @@
 <form method="POST">
     <input name="id" value="<?= $post["id"] ?>" type="hidden" />
     <label>Date time:
-        <input name="date_time" value="<?= $_POST["date_time"] ?? $post["date_time"] ?>" />
+        <input name="date_time" type="datetime-local" value="<?= $_POST["date_time"] ?? $post["date_time"] ?>" />
         <?php if (isset($errors["date_time"])) { ?>
             <p class="invalid-data"><?= $errors["date_time"] ?></p>
         <?php } ?>
