@@ -3,7 +3,7 @@
 
 <h1>Pasākums</h1>
 
-<?= htmlspecialchars($post["date_time"]) . " | " . htmlspecialchars($post["nosaukums"]) . " | " . htmlspecialchars($post["norises_vieta"]) ?>
+<?= htmlspecialchars($post["date_time"]) . " / " . htmlspecialchars($post["nosaukums"]) . " / " . htmlspecialchars($post["norises_vieta"]) ?>
 
 
 

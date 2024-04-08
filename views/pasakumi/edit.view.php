@@ -2,16 +2,27 @@
 <?php require "views/components/navbar.php" ?>
 
 
-<form action="/edit-pas" method="POST">
+<form method="POST">
     <input name="id" value="<?= $post["id"] ?>" type="hidden" />
-    <label for="date_time">Datums un laiks:</label>
-    <input type="datetime-local" id="date_time" name="date_time" value="<?= date('Y-m-d\TH:i', strtotime($post['date_time'])) ?>"><br>
+    <label>Date time:
+        <input name="date_time" value="<?= $_POST["date_time"] ?? $post["date_time"] ?>" />
+        <?php if (isset($errors["date_time"])) { ?>
+            <p class="invalid-data"><?= $errors["date_time"] ?></p>
+        <?php } ?>
+    </label>
 
-    <label for="nosaukums">Nosaukums:</label>
-    <input type="text" id="nosaukums" name="nosaukums" value="<?= $post['nosaukums'] ?>"><br>
-
-    <label for="norises_vieta">Norises Vieta:</label>
-    <input type="text" id="norises_vieta" name="norises_vieta" value="<?= $post['norises_vieta'] ?>"><br>
-    <button name="id" value="<?= $post['id'] ?>">Edit</button>
+    <label>Nosaukums:
+        <input name="nosaukums" value="<?= $_POST["nosaukums"] ?? $post["nosaukums"] ?>" />
+        <?php if (isset($errors["nosaukums"])) { ?>
+            <p class="invalid-data"><?= $errors["nosaukums"] ?></p>
+        <?php } ?>
+    </label>
+    <label>norises vieta:
+        <input name="norises_vieta" value="<?= $_POST["norises_vieta"] ?? $post["norises_vieta"] ?>" />
+        <?php if (isset($errors["norises_vieta"])) { ?>
+            <p class="invalid-data"><?= $errors["norises_vieta"] ?></p>
+        <?php } ?>
+        <button>Saglabāt</button>
+    </label>
 </form>
 <?php require "views/components/footer.php" ?>
